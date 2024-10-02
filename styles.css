@@ -1,0 +1,202 @@
+/* Import Google Font for Varela Round */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Body styling */
+body {
+  background-color: #fff0f0; /* Match the gif background color */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Hearts container */
+.hearts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Gif styling */
+.gif {
+  width: 250px; /* Larger size */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Crayon Button Styling */
+.crayon-button {
+  background: linear-gradient(135deg, #ff9fbf 25%, #ff88a8 25%, #ff88a8 50%, #ff9fbf 50%, #ff9fbf 75%, #ff88a8 75%, #ff88a8); 
+  background-size: 40px 40px;
+  color: white;
+  border: purple;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-family: 'Pacifico', cursive;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.crayon-button:hover {
+  background: linear-gradient(135deg, #ff88a8 25%, #ff9fbf 25%, #ff9fbf 50%, #ff88a8 50%, #ff88a8 75%, #ff9fbf 75%, #ff9fbf); 
+  background-size: 40px 40px;
+}
+
+/* Heart styling */
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url('hearts.png') no-repeat center center / contain;
+  opacity: 0.6;
+  transform: rotate(var(--rotate-angle));
+  animation: float-up 15s linear infinite;
+}
+
+/* Cute text style with larger font */
+.cute-text {
+  font-family: 'Pacifico', cursive;
+  color: #ff6f91; /* Pink color */
+  text-align: center;
+  font-size: 200%;
+  margin: 15px 0;
+}
+
+/* Floating animation */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) rotate(var(--rotate-angle));
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150vh) rotate(var(--rotate-angle));
+    opacity: 0;
+  }
+}
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+
+/* Fade-out animation */
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Keyframes for fade-out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* White box styling around gif and button */
+.content-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  opacity: 1; /* Ensure it's initially visible */
+}
+
+/* Styling for text input */
+.text-input {
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Pacifico', cursive;
+  color: #ff6f91; /* Pink color */
+  border: 2px solid #ff9fbf;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Activity options styling with grid */
+.activity-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for activities */
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+  }
+  
+  .activity-options label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Space between checkbox and GIF */
+  }
+  
+  .activity-options img {
+    width: 200px; /* Adjust gif size */
+  }
+  
+  .row {
+    display: contents; /* Maintain grid structure for each row */
+  }
+  
+  /* "All of the above" centered at the bottom */
+  .centered-all {
+    grid-column: span 2; /* Span across both columns */
+    text-align: center;
+    margin-top: 30px;
+  }
+
+/* Shake animation for the "No" button playful effect */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
