@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Catherine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="content-box" id="content-box">
+    <!-- Initial Gif and Button -->
+    <img src="https://i.pinimg.com/originals/6d/da/3f/6dda3f82322b902d1b1694432c5315e3.gif" alt="Cute Gif" class="gif" id="initialGif">
+    <button class="crayon-button" id="whoMeBtn">Who me?</button>
+
+    <!-- Compliment Section after "Who me?" button click -->
+    <img src="https://i.pinimg.com/originals/df/de/0f/dfde0f26e3406860990e41b3b1026ab4.gif" alt="Compliment Gif" class="gif hidden" id="complimentGif">
+    <p class="cute-text hidden" id="complimentText">You look really cute! 😳</p>
+
+    <div id="response-buttons" class="hidden">
+      <button class="crayon-button" id="thankYouBtn">Thank you!</button>
+      <button class="crayon-button" id="soBtn">So?</button>
+    </div>
+
+    <!-- Name Input Section after button press -->
+    <div class="hidden" id="name-section">
+      <img src="https://media.tenor.com/vmvaMX3F-3IAAAAj/hehehehe.gif" alt="Hehe Gif" class="gif" id="newGif">
+      <p class="cute-text">Can I know your name, sweetheart? 😇</p>
+      <input type="text" id="nameInput" class="text-input" placeholder="Enter your name...">
+      <button class="crayon-button" id="submitNameBtn">Submit</button>
+      <p class="cute-text hidden" id="nicknameHint">p.s. it's your nickname ✨🍍</p>
+    </div>
+
+    <!-- Date Section -->
+    <div class="hidden" id="date-section">
+      <img src="https://media.tenor.com/wbqDH6hm_gcAAAAi/peach-goma-peach-and-goma.gif" alt="Date Gif" class="gif" id="dateGif">
+      <p class="cute-text">Will you go on a date with me? 🥺</p>
+      <button class="crayon-button" id="yesBtn">Yes</button>
+      <button class="crayon-button" id="noBtn">No</button>
+    </div>
+
+    <!-- Date Selection Section -->
+<div class="hidden" id="dateSelection-section">
+    <img src="https://media.tenor.com/G6E-T6-Bl6UAAAAM/bear-kiss-bear-kisses.gif" alt="Yay Gif" class="gif">
+    <p class="cute-text">Yaaay!! Let's goo!! Tell me the date?? 😘</p>
+    <input type="date" id="dateInput" class="text-input">
+    <p class="cute-text hidden" id="dateHint">p.s. choose this Saturday 🗓️</p>
+    <button class="crayon-button hidden" id="letsGoBtn">Let's go</button>
+  </div>
+  <!-- Activity Selection Section -->
+<div class="hidden" id="activity-section">
+  <p class="cute-text">What do you wanna do? 😏</p>
+  <div class="activity-options">
+    <div class="row">
+      <label>
+        <input type="checkbox" name="activity" value="Singing">
+        <img src="https://media.tenor.com/f9FDCVD_sBUAAAAM/cute-bear.gif" alt="Singing Gif" class="gif">
+        Singing
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="Dancing">
+        <img src="https://media.tenor.com/V50JYWAv0KcAAAAM/milkandmocha-couple.gif" alt="Dancing Gif" class="gif">
+        Dancing
+      </label>
+    </div>
+    <div class="row">
+      <label>
+        <input type="checkbox" name="activity" value="Cuddling">
+        <img src="https://media.tenor.com/TyrY0krJG3kAAAAj/milk-and-mocha.gif" alt="Cuddling Gif" class="gif">
+        Cuddling
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="Kissing">
+        <img src="https://media.tenor.com/ca9-PL8Va4sAAAAM/cute-bear-cute.gif" alt="Kissing Gif" class="gif">
+        Kissing
+      </label>
+    </div>
+    <div class="row">
+      <label>
+        <input type="checkbox" name="activity" value="Playing">
+        <img src="https://media1.tenor.com/m/lfVhLxM4i9IAAAAC/sleep.gif" alt="Playing Gif" class="gif">
+        Playing
+      </label>
+      <label>
+        <input type="checkbox" name="activity" value="Makeout">
+        <img src="https://media.tenor.com/YPVPBHfjJZ4AAAAM/cute-couple-sex.gif" alt="Makeout Gif" class="gif">
+        Makeout
+      </label>
+    </div>
+    <div class="row center">
+      <label class="centered-all">
+        <input type="checkbox" name="activity" value="All of the above" id="allOfAbove">
+        <p class="cute-text">Everything</p>
+      </label>
+    </div>
+  </div>
+  <!-- Submit Button -->
+  <button class="crayon-button" id="submitActivitiesBtn">Submit</button>
+</div>
+<!-- Last Question Section -->
+ <!-- Last Question Section -->
+<div class="hidden" id="last-question-section">
+    <img src="https://media.tenor.com/YNqzKzPOLTsAAAAM/emote.gif" alt="Love Gif" class="gif">
+    <p class="cute-text">Last question:<br>Do you love me? 🥺</p>
+    <div id="love-buttons">
+      <button class="crayon-button" id="loveYouBtn">I love you</button>
+      <button class="crayon-button" id="dontLoveBtn">No, I don't</button>
+    </div>
+  </div>
+<!-- Final Love Response Section (Initially Hidden) -->
+<div class="hidden" id="final-love-response">
+    <img src="https://media.tenor.com/iFXnOUD2D7oAAAAj/milk-and-mocha.gif" alt="Love Gif" class="gif">
+    <p class="cute-text">Aww 😍 I love you too!! 😘<br><br>See you soon<br><br>Now go call your boyfriend, he's waiting 📞❤️.</p>
+  </div>
+  
+  <!-- Playful Regret Section for No Button (Initially Hidden) -->
+  <div class="hidden" id="regret-section">
+    <p class="cute-text">Oh no! 😱 You chose the wrong button! 😭<br><br>Try again, or he'll be sad! 😢💔</p>
+    <button class="crayon-button" id="retryBtn">I'm Sorry!</button>
+  </div>
+    
+</div>
+
+  <div class="hearts-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
